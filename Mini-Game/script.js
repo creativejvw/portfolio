@@ -1,135 +1,106 @@
-
-
-
-//Array of 6 pairs of baby goat images
-var images = [
-        <"/babygoats1.jpg" alt="babygoats1" class="hidden">,
-        <"/babygoats2.jpg" alt="babygoats2" class="hidden">,
-        <"/babygoats3.jpg" alt="babygoats3" class="hidden">,
-        <"/babygoats4.jpg" alt="babygoats4" class="hidden">,
-        <"/babygoats5.jpg" alt="babygoats5" class="hidden">,
-        <"/babygoats6.jpg" alt="babygoats6" class="hidden">,
-        <"/babygoats1.jpg" alt="babygoats1" class="hidden">,
-        <"/babygoats2.jpg" alt="babygoats2" class="hidden">,
-        <"/babygoats3.jpg" alt="babygoats3" class="hidden">,
-        <"/babygoats4.jpg" alt="babygoats4" class="hidden">,
-        <"/babygoats5.jpg" alt="babygoats5" class="hidden">,
-        <"/babygoats6.jpg" alt="babygoats6" class="hidden">,
-    ];
-    images = images.concat(images);
-    images.sort(() => 0.5 - Math.random());
-    var main = document.getElementById("main");
-    var firstClick, secondClick;
-
-//Shuffle array
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-  
-    return array;
+document.addEventListener("DOMContentLoaded", () => {
+  const cardArray = [
+    { name: "Baby Goat 1",
+      img: "babygoats1.jpeg height="100" width="100" alt="baby goat with open mouth and cone hat on yellow background""
+    },
+    { name: "Baby Goat 2",
+      img: "babygoats2.jpeg height="100" width="100" alt="AI baby goat to left of dark orb with other planets in background""
+    },
+    { name: "Baby Goat 3",
+      img: "babygoats3.jpeg height="100" width="100" alt="AI baby goat in floral coat with pink collar""
+    },
+    { name: "Baby Goat 4",
+      img: "babygoats4.jpeg height="100" width="100" alt="AI goat facing left with rainbow striped body""
+    },
+    { name: "Baby Goat 5",
+      img: "babygoats5.jpeg height="100" width="100" alt="AI baby goat facing forward with white fur, red polkadot bows on each ear, and tongue sticking out""
+    },
+    { name: "Baby Goat 6",
+      img: "babygoats6.jpeg height="100" width="100" alt="goat with orange sunglasses facing forward on orange background"
+    },
+{ name: "Baby Goat 1",
+  img: "babygoats1.jpeg height="100" width="100" alt="baby goat with open mouth and cone hat on yellow background""
+},
+{ name: "Baby Goat 2",
+  img: "babygoats2.jpeg height="100" width="100" alt="AI baby goat to left of dark orb with other planets in background""
+},
+{ name: "Baby Goat 3",
+  img: "babygoats3.jpeg height="100" width="100" alt="AI baby goat in floral coat with pink collar""
+},
+{ name: "Baby Goat 4",
+  img: "babygoats4.jpeg height="100" width="100" alt="AI goat facing left with rainbow striped body""
+},
+{ name: "Baby Goat 5",
+  img: "babygoats5.jpeg height="100" width="100" alt="AI baby goat facing forward with white fur, red polkadot bows on each ear, and tongue sticking out""
+},
+{ name: "Baby Goat 6",
+  img: "babygoats6.jpeg height="100" width="100" alt="goat with orange sunglasses facing forward on orange background"
   }
-  
-  var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  shuffle(myArray);
-  console.log(myArray);
+]
 
-//Add timer
-var timer;
-var time = 0;
-var timerElement = document.getElementById('timer');
+cardArray.sort(() => 0.5 - Math.random()) 
 
-function startTimer() {
-  timer = setInterval(function() {
-    time++;
-    timerElement.innerHTML = time;
-  }, 1000);
+const board = document.queryselector('.board')
+const result = document.getElementById('score')
+const placeholder = "https://www.dropbox.com/scl/fi/9sdqemjsbur7m4vxu2290/Question-mark.jpeg?rlkey=1lus6dcoqef4gwo6yuxil6fe9&dl=0"
+const blank = "https://www.dropbox.com/scl/fi/dxcg0dzbfn9bv2tl43ujt/Pink.jpeg?rlkey=3ngmzbmlmn17bnhxjfgcf1jfi&dl=0"
+var cardsClicked = []
+var cardsClickedID = []
+var cardsMatched = []
+
+// game board
+function createBoard() {
+  for (let i = 0; i < cardArray.length; i++) {
+    var card = document.createElement("img")
+    card.setAttribute("src", placeholder)
+    card.setAttribute("data-id", i)
+    card.addEventListener("click", flipCard)
+    board.appendChild(card)
+  }
 }
 
-function stopTimer() {
-  clearInterval(timer);
-}
-var resultsElement = document.getElementById('results');
-var finalScoreElement = document.getElementById('final-score');
-var finalTimeElement = document.getElementById('final-time');
-
-// Start the timer when the first box is clicked
-main.addEventListener('click', function(e) {
-  if (!timer) {
-    startTimer();
+// card flip
+function flipCard() {
+  var cardId = this.getAttribute("data-id")
+  cardsClicked.push(cardArray[cardId].name)
+  cardsClickedId.push(cardId)
+  this.setAttribute("src", cardArray[cardId].img)
+  if (cardsClicked.length === 2) {
+    setTimeout(checkForMatch, 500)
   }
-});
-if (matchedPairs === 6) {
-    // The game is over, show the results screen
-    resultsElement.style.display = 'block';
-  
-    // Update the final score and time
-    finalScoreElement.innerHTML = 'Your score: ' + score;
-    finalTimeElement.innerHTML = 'Your time: ' + time + ' seconds';
-  
-    // Stop the timer when the game is over
-    // You need to determine when the game is over based on your game logic
-    if (gameIsOver) {
-    stopTimer();
-    } else {}
+}
 
-//Add images to game board
-    for (var i = 0; i < images.length; i++) {
-        var img = document.createElement("img");
-        img.src = images[i];
-        img.classList.add("hidden");
-        
-        var box = document.createElement("div");
-        box.classList.add("box");
-        box.appendChild(img);
+// check match
+function checkForMatch() {
+  var cards = document.querySelectorAll("img")
+  const firstCard = cardsClickedId[0]
+  const secondCard = cardsClickedId[1]
 
-        var score = 0;
-        var scoreElement = document.getElementById('score');
+  if(firstCard === secondCard) {
+      cards[firstCard].setAttribute("src", placeholder)
+      cards[secondCard].setAttribute("src", placeholder)
+      alert("You have clicked the same image!")
+}
+  else if(cardsClicked[0] === cardsClicked[1]) {
+    cards[firstCard].setAttribute("src", blank)
+    cards[secondCard].setAttribute("src", blank)
+    cards[firstCard].removeEventListener("click", flipCard)
+    cards[secondCard].removeEventListener("click", flipCard)
+    cardsMatched.push(cardsClicked)
+  } else {
+    setTimeout(() => {
+      cards[firstCard].setAttribute("src", placeholder)
+      cards[secondCard].setAttribute("src", placeholder)
+    }, 300)
+  }
+  cardsClicked = []
+  cardsClickedId = []
+  result.textContent = cardsMatched.length
+  if (cardsMatched.length === cardArray.length/2 {
+    result.textContent = "Congratulations! You found them all!"
+  }
+}
 
-        box.addEventListener("click", function() {
-            if (!firstClick) {
-                firstClick = e.target;
-                firstClick.firstChild.classList.remove("hidden");
-            } else if (!secondClick) {
-                secondClick = e.target;
-                secondClick.firstChild.classList.remove("hidden");
+createBoard()
 
-                if (firstClick.firstChild.src === secondClick.firstChild.src) {
-                    //increment the score
-                    score++;
-                    scoreElement.innerHTML = score;
-                    //images match, so remove boxes
-                    firstClick.classList.remove("box");
-                    secondClick.classList.remove("box");
-
-                    matchedPairs++;
-                    if (matchedPairs === 6) {
-                        alert("You won!");
-                        stopTimer(); 
-                    
-                } else {
-                    //images don't match, so hide images again
-                    setTimeout(function() {
-                        firstClick.firstChild.classList.add("hidden");
-                        secondClick.firstChild.classList.add("hidden");
-                    }, 1000);
-                }
-  //Reset firstClick and secondClick
-            firstClick = null;
-            secondClick = null;
-            }
-        });
-        main.appendChild(box);
-    }
-  
+})
