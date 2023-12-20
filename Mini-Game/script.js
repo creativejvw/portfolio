@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const board = document.querySelector('.board');
   const result = document.getElementById('score');
-  const placeholder = "https://www.dropbox.com/scl/fi/9sdqemjsbur7m4vxu2290/Question-mark.jpeg?rlkey=1lus6dcoqef4gwo6yuxil6fe9&dl=0";
-  const blank = "https://www.dropbox.com/scl/fi/dxcg0dzbfn9bv2tl43ujt/Pink.jpeg?rlkey=3ngmzbmlmn17bnhxjfgcf1jfi&dl=0";
+  const placeholder = "questionmark.jpeg";
+  const blank = "pinkbackground.jpeg";
   var cardsClicked = [];
   var cardsClickedID = [];
   var cardsMatched = [];
