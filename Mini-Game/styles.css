@@ -1,29 +1,37 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, Playfair Display, Poiret One, Calibri, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-  }
-  body{
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #e7dfe4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, Playfair Display, Poiret One, Calibri, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
     }
-  h3{
-    padding: 20px;
-  }
-  .board {
-    display: flex;
-    flex-wrap: wrap;
-    width: 440px;
-    height: 330px;
-  }
-  img{
-    padding: 5px;
-    border-radius: 15px;
-  }
+    body{
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #e7dfe4;
+        }
+    h3{
+        padding: 20px;
+    }
+    .board {
+        display: flex;
+        flex-wrap: wrap;
+        width: 440px;
+        height: 330px;
+    }
+    img{
+        padding: 5px;
+        border-radius: 15px;
+    }
+}
+.start-button {
+        border: none;
+        border-radius: 0.3em;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        background: #fc7fce;
+}

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cardArray = [
+  <button id="startButton">Start Game</button>
     { name: "Baby Goat 1",
       img: "babygoats1.jpeg", height: "25", width: "25", alt: "baby goat with open mouth and cone hat on yellow background"
     },
@@ -37,12 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "babygoats6.jpeg", height: "25", width: "25", alt: "goat with orange sunglasses facing forward on orange background"
     }
   ];
+
   cardArray.sort(() => 0.5 - Math.random());
 
   const board = document.querySelector('.board');
   const result = document.getElementById('score');
   const placeholder = "questionmark.jpeg";
-  const blank = "pinkribbon.jpeg";
+  const blank = "pinkbackground.jpeg";
   var cardsClicked = [];
   var cardsClickedID = [];
   var cardsMatched = [];
