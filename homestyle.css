@@ -1,27 +1,9 @@
-<style>
+
 * {
   box-sizing: border-box;
   padding: 0;
   webkit-font-smoothing: antialiased;
-}
-  /* CSS HEX 
-  primary: #d918a9; /*pink*/
-  new primary: #ab1a1a; /*red*/
-  new primary2: #ea1212; /*red*/
-  bgDark: #403e81; /*navy*/
-  new bgDark: #272120; /*navy*/
-  bgLight: #dce1e3; /*lightest gray*/
-  new bgLight: #c3a69f; /*lightest gray*/
-  secondary: #9095a4; /*med gray*/
-  new secondary: #3a3230; /*med gray*/
-  new bgMed: #625350; /*med-lt gray*/
-  white: #ffffff;
-  bgMed: #aeb3bb; /*med-lt gray*/
-  nevada: #646c6d; /*darkest gray*/
-  sirocco: #737474; /*darker gray*/
-  lilac: #d19ccd; /*light purple*/
-    #abacac; /*med-dk gray*/
-}   
+} 
 
 header {
     background-color: #52063c;
@@ -30,6 +12,7 @@ header {
     font-size: 35px;
     color: #e3d6e0;  
 }
+
 header nav .left a{
     color: #e3d6e0;
     text-decoration: none;
@@ -37,12 +20,15 @@ header nav .left a{
     text-transform: uppercase;
     transition: all .2s ease;
 }
+
 header nav .left a:hover{
     color:#e3d6e0;
 }
+
 header nav {
     padding: 2rem 0;    
 }
+
 header nav .logo{
     margin-right: 3rem;
 }
@@ -51,8 +37,9 @@ html,
 body {
   font-family: Arial, 'Poppins', sans-serif;
   background-color: #52063c;
-  color: e3d6e0;
+  color: #e3d6e0;
 }
+
 .btn-primary {
   display: inline-block;
   align-items: right;
@@ -140,6 +127,7 @@ img {
 /* Style the header */
 .header {
   background-color: #e3d6e0;
+  color:#52063c
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -150,6 +138,9 @@ img {
   padding: 10px;
   text-align: center;
   font-size: 20px;
+}
+h3 {
+  color: #52063c;
 }
 /* Container for flexboxes */
 .row {
@@ -181,4 +172,4 @@ img {
     flex-direction: column;
   }
 }
-</style>
+/* Add your CSS selector or at-rule here */
