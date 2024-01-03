@@ -1,0 +1,82 @@
+ *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif 
+  }
+html, body {
+    margin: 20px 0;
+    margin: 20px 0;
+    background: #f9dfde;
+    }
+
+h1, h2, h3 {
+    color: #dd037b;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+.grid {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+ }
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+ }
+
+.card, .back, .front {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+ }
+
+.back, .front {
+  position: absolute;
+  backface-visibility: hidden;
+ }
+
+.front {
+  z-index: 2;
+  background: #ff7c73 url("https://www.dropbox.com/scl/fi/ykdxntu356mh9duekwg48/question_mark_licensed.jpg?rlkey=bw7kaow8n25mo6jx1e6rb9sqa&dl=0") no-repeat;
+  background-position: center center / contain;
+ }
+
+.selected {
+  transform: rotateY(180deg);
+ }
+
+.match .front {
+  background: #fc7fce url("https://www.dropbox.com/scl/fi/ft27ooo2uta4ahjeitukt/ribbon_licensed.jpg?rlkey=9wj84ozxj873qccl1d1bh9cny&dl=0") !important;
+ }
+
+.back {
+  transform: rotateY(180deg);   
+  background: #dd037b no-repeat center center / contain;
+  }
+
+#start-button{
+      border: none;
+      border-radius: 0.3em;
+      align-items: right;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      background: #ff7c73;
+      transition: all 0.3s ease;
+  }
+
+#start-button:hover {
+      background: #fff;
+      color: #ff7c73;
+      background: transparent;
+      border-color: #ff7c73;
+      color: #f9dfde;
+  }

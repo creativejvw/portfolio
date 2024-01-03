@@ -1,103 +1,134 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cardArray = [
-    { name: "Baby Goat 1",
-      img: "babygoats1.jpeg", height: "25", width: "25", alt: "baby goat with open mouth and cone hat on yellow background"
+const cards = document.getElementsByClassName("card");
+let allImages=
+  document.getElementsByClassName("card-image");
+let movesDisplay =
+  document.querySelector(".move-counter");
+let toggledCardsArray = [];
+let move = 0;
+let winCount = 0;
+
+const imagesLinkArray = [
+  {
+  id: 2,
+  src: "babygoats1_licensed.jpeg",
+  alt: "baby goat with open mouth and cone hat on yellow background",
     },
-    { name: "Baby Goat 2",
-      img: "babygoats2.jpeg", height: "25", width: "25", alt: "AI baby goat to left of dark orb with other planets in background"
+  {
+  id: 3,
+  src: "babygoats2_licensed.jpeg",
+  alt: "baby goat in serene yoga pose on pink petals with light purple background",
     },
-    { name: "Baby Goat 3",
-      img: "babygoats3.jpeg", height: "25", width: "25", alt: "AI baby goat in floral coat with pink collar"
+  {
+  id: 4,
+  src: "babygoats3_licensed.jpeg",
+  alt: "baby goat playing with blue ball on white background",
     },
-    { name: "Baby Goat 4",
-      img: "babygoats4.jpeg", height: "25", width: "25", alt: "AI goat facing left with rainbow striped body"
-    },
-    { name: "Baby Goat 5",
-      img: "babygoats5.jpeg", height: "25", width: "25", alt: "AI baby goat facing forward with white fur, red polkadot bows on each ear, and tongue sticking out"
-    },
-    { name: "Baby Goat 6",
-      img: "babygoats6.jpeg", height: "25", width: "25", alt: "goat with orange sunglasses facing forward on orange background"
-    },
-    { name: "Baby Goat 1",
-      img: "babygoats1.jpeg", height: "25", width: "25", alt: "baby goat with open mouth and cone hat on yellow background"
-    },
-    { name: "Baby Goat 2",
-      img: "babygoats2.jpeg", height: "25", width: "25", alt: "AI baby goat to left of dark orb with other planets in background"
-    },
-    { name: "Baby Goat 3",
-      img: "babygoats3.jpeg", height: "25", width: "25", alt: "AI baby goat in floral coat with pink collar"
-    },
-    { name: "Baby Goat 4",
-      img: "babygoats4.jpeg", height: "25", width: "25", alt: "AI goat facing left with rainbow striped body"
-    },
-    { name: "Baby Goat 5",
-      img: "babygoats5.jpeg", height: "25", width: "25", alt: "AI baby goat facing forward with white fur, red polkadot bows on each ear, and tongue sticking out"
-    },
-    { name: "Baby Goat 6",
-      img: "babygoats6.jpeg", height: "25", width: "25", alt: "goat with orange sunglasses facing forward on orange background"
+  {
+  id: 5,
+  src: "babygoats4_licensed.jpeg",
+  alt: "adorable baby goat painted with rainbow flowers",
+      },
+  {
+  id: 6,
+  src: "babygoats5_licensed.jpeg",
+  alt: "baby goats side-by-side wearing plain hoodies in lavender, magenta, rainbox, teal, and yellow",
+      },
+  {
+  id: 7,
+  src: "babygoats6_licensed.jpeg",
+  alt: "baby goat in red pyjama on white background",
+      },
+  {
+  id: 8,
+  src: "babygoats1_licensed.jpeg",
+  alt: "baby goat with open mouth and cone hat on yellow background",
+      },
+  {
+  id: 9,
+  src: "babygoats2_licensed.jpeg",
+  alt: "baby goat in serene yoga pose on pink petals with light purple background",
+      },
+  {
+  id: 10,
+  src: "babygoats3_licensed.jpeg",
+  alt: "baby goat playing with blue ball on white background",
+      },
+  {
+  id: 11,
+  src: "babygoats4_licensed.jpeg",
+  alt: "adorable baby goat painted with rainbow flowers",
+      },
+  {id: 12,
+  src: "babygoats5_licensed.jpeg",
+  alt: "baby goats side-by-side wearing plain hoodies in lavender, magenta, rainbox, teal, and yellow",
+      },
+  {id: 13,
+  src: "babygoats6_licensed.jpeg",
+  alt: "baby goat in red pyjama on white background",
     }
-  ];
-  cardArray.sort(() => 0.5 - Math.random());
-
-  const board = document.querySelector('.board');
-  const result = document.getElementById('score');
-  const placeholder = "questionmark.jpeg";
-  const blank = "pinkribbon.jpeg";
-  var cardsClicked = [];
-  var cardsClickedID = [];
-  var cardsMatched = [];
-
-  // game board
-  function createBoard() {
-    for (let i = 0; i < cardArray.length; i++) {
-      var card = document.createElement("img");
-      card.setAttribute("src", placeholder);
-      card.setAttribute("data-id", i);
-      card.addEventListener("click", flipCard);
-      board.appendChild(card);
-    }
-  }
-
-  // card flip
-  function flipCard() {
-    var cardId = this.getAttribute("data-id");
-    cardsClicked.push(cardArray[cardId].name);
-    cardsClickedID.push(cardId);
-    this.setAttribute("src", cardArray[cardId].img);
-    if (cardsClicked.length === 2) {
-      setTimeout(checkForMatch, 500);
-    }
-  }
-
-  // check match
-  function checkForMatch() {
-    var cards = document.querySelectorAll("img");
-    const firstCard = cardsClickedID[0];
-    const secondCard = cardsClickedID[1];
-
-    if (firstCard === secondCard) {
-      cards[firstCard].setAttribute("src", placeholder);
-      cards[secondCard].setAttribute("src", placeholder);
-      alert("You have clicked the same image!");
-    } else if (cardsClicked[0] === cardsClicked[1]) {
-      cards[firstCard].setAttribute("src", blank);
-      cards[secondCard].setAttribute("src", blank);
-      cards[firstCard].removeEventListener("click", flipCard);
-      cards[secondCard].removeEventListener("click", flipCard);
-      cardsMatched.push(cardsClicked);
-    } else {
-      setTimeout(() => {
-        cards[firstCard].setAttribute("src", placeholder);
-        cards[secondCard].setAttribute("src", placeholder);
-      }, 300);
-    }
-    cardsClicked = [];
-    cardsClickedID = [];
-    result.textContent = cardsMatched.length;
-    if (cardsMatched.length === cardArray.length / 2) {
-      result.textContent = "Congratulations! You found them all!";
-    }
-  }
-
-  createBoard();
+];
+const restartGame = () => {
+  let toggledCard = document.getElementsByClassName("card toggled");
+  imagesLinkArray.sort(() => Math.random() -0.5);
+  
+Array.from(toggledCard).forEach(function (el) {
+  setTimeout (() => {
+    el.classList.remove("toggled");
+  }, 0);
 });
+
+toggledCardsArray.length = 0;
+move = 0;
+winCount=0;
+movesDisplay.innerText = `Moves: ${move}`;
+    
+let allImagesSrc = document.getElementsByClassName("card-image");
+
+Array.from(allImagesSrc).forEach((el, index)=> {
+    el.src =imagesLinkArray[index].src;
+    el.alt=imagesLinkArray[index].alt;
+    el.id=imagesLinkArray[index].id;
+  });
+};
+
+const startGame = document.getElementById("startGame");
+startGame.addEventListener("click", startGame);
+
+const restart = document.getElementById("restart");
+restartGame.addEventListener("click", restartGame);
+
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("click", function () {
+    this.classList.add("toggled");
+    toggledCardsArray.push(this);
+
+    if(toggledCardsArray.length > 1) {
+      let thisImgSrc = this.querySelector(".card-image").src;
+      let previousImgSrc = toggledCardsArray[toggledCardsArray.length -2].querySelector(".card-image").src;
+    
+      if(thisImgSrc !== previousImgSrc){
+        toggledCardsArray.forEach(function (el){
+          setTimeout(()=> {
+            el.classList.remove("toggled");
+          }, 500);
+        });
+
+        toggledCardsArray.length = 0;
+        move++;
+      } else {
+        toggledCardsArray.length = 0;
+        move++;
+        winCount++;
+      }
+    
+      movesDisplay.innerText = `Moves: $(move)`;
+    
+      if(winCount===6) {
+        setTimeout(()=> {
+          alert(`Congratulations! You matched all the pairs in $(move) moves! You win!`);
+        }, 300)
+      }
+    }
+  });
+}
+startGame();
