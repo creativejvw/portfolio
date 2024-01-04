@@ -14,6 +14,7 @@
   text-align: center; 
   font-size: 25px;
 }
+
 html,
 body {
   font-family: "Quicksand", "Poppins", sans-serif;
@@ -25,6 +26,7 @@ body {
   place-items: center;
   scroll-behavior: smooth;
 }
+
 #favicon {
   max-width: 30px;
   max-height: 30px;
@@ -234,6 +236,7 @@ a:active {
   font-weight: 40ps;
   color: #54afc6;
 }
+
 p {
   color: #e3d6e0;
   font-size: 20px;
@@ -259,7 +262,6 @@ h4 {
   font-weight: bold;
   font-size: 18px;  
 }
-
 
 #flex-pic {
   max-width: 200px;
@@ -390,29 +392,27 @@ h4 {
   text-align: center;
 }
 
-
 /* Responsive layout - makes the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1000px) {
   main {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-.left img {
+  .left img {
   width: 100px;
-}
-
-.right {
+  }
+  .right {
   padding-top: 40px;
   text-align: center;
-}
-h1 {
+  }
+  h1 {
   font-size: 30px;
-}
-button {
+  }
+  button {
   padding: 15px 90px;
-}
-footer {
+  }
+  footer {
   text-align: center;
   padding-top: 80px;
+  }
 }
-

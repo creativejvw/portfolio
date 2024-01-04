@@ -1,25 +1,28 @@
 var cardsArray = [   
-    { "name": "1", "img": "https://www.dropbox.com/scl/fi/r9vy6gezpfl245l58igh6/babygoats1_licensed.jpeg?rlkey=km4k9o7rnvyhsyt2p9059jps2&dl=0", "alt": "AI baby goat with open mouth and cone hat on yellow background",
+    { "name": "1", "img": "hhttps://i.imgur.com/1gOAW40.jpg", "alt": "AI baby goat with open mouth and cone hat on yellow background",
     },
-    { "name": "2", "img": "https://www.dropbox.com/scl/fi/8o3lezw70y3axl2xmtu6d/babygoats2_licensed.jpeg?rlkey=uwt4d028snl1qn34p886bns3o&dl=0", "alt": "AI baby goat in serene yoga pose on pink petals with light purple background",
+    { "name": "2", "img": "https://i.imgur.com/4m521am.jpg", "alt": "AI baby goat in serene yoga pose on pink petals with light purple background",
     },
-    { "name": "3", "img": "https://www.dropbox.com/scl/fi/5k6p9aop95c2qt6m342bq/babygoats3_licensed.jpeg?rlkey=c0j0qqtn1brbtzdr9qk7hk8gf&dl=0", "alt": "AI baby goat playing with blue ball on white background",
+    { "name": "3", "img": "https://i.imgur.com/sWBZrXN.jpg", "alt": "AI baby goat playing with blue ball on white background",
     },
-    { "name": "4", "img": "https://www.dropbox.com/scl/fi/7t14kr8cnv8jcdhm8avl1/babygoats4_licensed.jpeg?rlkey=4nv9vvydpov00u333ldyq544k&dl=0", "alt": "adorable AI baby goat painted with rainbow flowers",
+    { "name": "4", "img": "https://i.imgur.com/tJBerl7.jpg", "alt": "adorable AI baby goat painted with rainbow flowers",
     },
-    { "name": "5", "img": "https://www.dropbox.com/scl/fi/6rn4n4m6lzv7r5ubiegvz/babygoats5_licensed.jpeg?rlkey=6v3k4zioqzfof3ywzoti302uz&dl=0", "alt": "AI baby goats side-by-side wearing plain hoodies in lavender, magenta, rainbox, teal, and yellow",
+    { "name": "5", "img": "https://i.imgur.com/cexNoA2.jpg", "alt": "AI baby goats side-by-side wearing plain hoodies in lavender, magenta, rainbox, teal, and yellow",
     },
-    { "name": "6", "img": "https://www.dropbox.com/scl/fi/0dhqcflvys33dmpr6kekj/babygoats6_licensed.jpeg?rlkey=t50c6rvi2bciehqs5g9hk2w4d&dl=0", "alt": "AI baby goat in red pyjama on white background",
+    { "name": "6", "img": "https://i.imgur.com/gH5uPnz.jpg", "alt": "AI baby goat in red pyjama on white background",
     },
   ];
+
 var gameGrid = cardsArray.concat(cardsArray);
   gameGrid.sort(function() {
     return 0.5 - Math.random();   
   })
+
 var game = document.getElementById('game-board');
 var grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
 game.appendChild(grid);
+
 for(var i=0; i<gameGrid.length; i++) {
   var card = document.createElement('div');
   card.setAttribute('class', 'card');
@@ -33,6 +36,7 @@ for(var i=0; i<gameGrid.length; i++) {
   card.appendChild(front);
   card.appendChild(back);
 }
+
 var firstGuess = '';
 var secondGuess = '';
 
@@ -42,8 +46,8 @@ var previousTarget = null;
 var delay = 1200;
 
 var match = function() {
-var selected = document.querySelectorAll('.selected');
-for (i = 0; i<selected.length; i++) {
+  var selected = document.querySelectorAll('.selected');
+  for (i = 0; i<selected.length; i++) {
   selected[i].classList.add('match');
   }
 };
@@ -54,7 +58,7 @@ var resetGuesses = function() {
   count = 0;
   previousTarget = null;
   var selected = document.querySelectorAll('.selected');
-  for (i = 0; i<selected.length; i++) {
+    for (i = 0; i<selected.length; i++) {
     selected[i].classList.remove('selected');
   }
 };

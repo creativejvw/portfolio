@@ -2,12 +2,14 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif 
+      background: url("https://i.imgur.com/yJnKUUZ.jpg") no-repeat;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
+
 html, body {
     margin: 20px 0;
     margin: 20px 0;
-    background: #f9dfde;
+    background: url("https://i.imgur.com/yJnKUUZ.jpg") no-repeat  #f9dfde;
     }
 
 h1, h2, h3 {
@@ -15,7 +17,7 @@ h1, h2, h3 {
     text-align: center;
     font-weight: bold;
     padding: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
 .grid {
@@ -23,7 +25,7 @@ h1, h2, h3 {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
  }
 
 .card {
@@ -46,7 +48,7 @@ h1, h2, h3 {
 
 .front {
   z-index: 2;
-  background: #ff7c73 url("https://www.dropbox.com/scl/fi/ykdxntu356mh9duekwg48/question_mark_licensed.jpg?rlkey=bw7kaow8n25mo6jx1e6rb9sqa&dl=0") no-repeat;
+  background: #ff7c73 url("https://i.imgur.com/l6BCsf2.jpg") no-repeat;
   background-position: center center / contain;
  }
 
@@ -55,7 +57,7 @@ h1, h2, h3 {
  }
 
 .match .front {
-  background: #fc7fce url("https://www.dropbox.com/scl/fi/ft27ooo2uta4ahjeitukt/ribbon_licensed.jpg?rlkey=9wj84ozxj873qccl1d1bh9cny&dl=0") !important;
+  background: #fc7fce url("https://i.imgur.com/CPveZn9.jpg") no-repeat;
  }
 
 .back {
@@ -66,7 +68,8 @@ h1, h2, h3 {
 #start-button{
       border: none;
       border-radius: 0.3em;
-      align-items: right;
+      align-items: center;
+      justify-content: center;
       padding: 0.5em 1em;
       cursor: pointer;
       background: #ff7c73;
@@ -78,5 +81,5 @@ h1, h2, h3 {
       color: #ff7c73;
       background: transparent;
       border-color: #ff7c73;
-      color: #f9dfde;
+      color: #fc7fce;
   }
