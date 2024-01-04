@@ -4,42 +4,51 @@
     <title>Jeni VW Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="homestyle.css" rel="stylesheet" type="text/css"/>
-    <script src="homescript.js" defer></script>
-</head>
+    <link href="contact.css" rel="stylesheet" type="text/css"/>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+</head>
 <body>
-    <h1> Contact Us</h1>
-        <div class="field">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name." />
-            <small></small>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-wrapper">
+            <div class="formbold-form-wrapper">
+            <form action="https://app.formbold.com/s/92PYm" method="POST">
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="firstname class="formbold-form-label>
+                            Enter your first name:</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="Jane" class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="lastname" class="formbold-form-label">
+                            Enter your last name:</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="Cooper" class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="email" class="formbold-form-label">
+                            Enter your best email address:</label>
+                            <input type="email" name="email" id="email" placeholder="jhon@mail.com" class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="message" class="formbold-form-label">
+                            Enter your message:</label>
+                            <textarea rows="6" name="message" id="message" placeholder="Type your message." class="formbold-form-input"></textarea>
+                    </div>
+                    <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                            <input class="formbold-input-radio" type="radio" name="newsletter" id="newsletter">
+                            Sign up for our newsletter? (Be sure to respond to the email confirmation, or you will not be subscribed.
+                            <span class="formbold-radio-checkmark"></span>
+                        </label>
+                    </div>
+            <button class="formbold-btn">Send</button>
+        </form>
         </div>
-        <div class="field">
-            <label for="pronouns">Pronouns:</label>
-            <input type="text" id="pronouns" name="pronouns" placeholder="Enter your pronouns." />
-            <small></small>
-        </div>
-        <div class="field">
-        <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Enter your email address." />
-            <small></small>
-        </div>
-        <div class="field">
-            <label for="subject">Subject:</label>
-            <textarea id="subject" name="subject" placeholder="Write us a message." style="height:200px"></textarea>
-            <small></small>
-        </div>
-        <div class="field">
-            <label for="newsletter">Newsletter:</label>
-            <input type="checkbox" id="newsletter" />Sign up for our newsletter? (Be sure to respond to the email confirmation, or you will not be subscribed.)
-            <small></small>
-        <button type="submit">Subscribe</button>
-    </form>
+    </div>
 
 <div class="footer">
     <h4>© CreativeJ Coaching, LLC 2023</h4>
-  </div>
+</div>
     
   </body>
   </html>
