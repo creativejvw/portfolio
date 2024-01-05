@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="homestyle.css" rel="stylesheet" type="text/css"/> 
-    <title> </title>
+    <title>CreativeJ's Projects</title>
     <link href="projects.css" rel="stylesheet" > 
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@100&family=Playfair+Display&family=Poppins:wght@200&display=swap rel="stylesheet">
     <script src="projects.js" defer></script>
   </head>
-
-  <header> 
-    <div class="container-header"> 
-        <img src="cj_circle_navy_logo.png" align="center" alt="CreativeJ Coaching logo"></img>
-        <button class="btn-primary"><a href="index.html"><h2 id="Home">Home</h2></a></button>
+  <body>
+  <header id="header"> 
+    <div class="inner"> 
+        <img src="cj_circle_magenta_logo.png" align="center" alt="CreativeJ Coaching logo"></img>
+        <button class="btn-primary"><a href="index.html"><p id="Home">Home</p></a></button>
         <button class="btn-secondary"><a href="#Bio">Bio</a></button> 
         <button class="btn-primary"><a href="#Work">Work</a></button> 
         <button class="btn-secondary"><a href="#Skills">Skills</a></button>
@@ -25,27 +25,135 @@
     </div> 
   </header>
 
-  <body>
+    <! -- carousel container w/images -->
+    <div class="carousel-container"> 
+      <section class="hero">
+        <div class="hero-inner">
+          <h2>Graphic Design & Social Media Work</h2>
+          <p>Here are a few of my social media and design projects from the past decade. The carousel will auto-scroll for you.</p>
+        </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>1 / 10</h3></div>
+        <img src="rainbow-creative-j-social-media.jpg">
+        <div class="text"><h3>CreativeJ Coaching, LLC social media post</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>2 / 10</h3></div>
+        <img src="cj-dark-starwars-invite.png">
+        <div class="text"><h3>Star Wars wedding invitation (dark version)</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>3 / 10</h3></div>
+        <img src="cj-dark-starwars-rsvp.png">
+        <div class="text"><h3>Star Wars wedding rsvp card (dark version)</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>4 / 10</h3></div>
+        <img src="cj-light-starwars-invite.png">
+        <div class="text"><h3>Star Wars wedding invitation (light version, with characters)</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>5 / 10</h3></div>
+        <img src="cj-light-starwars-envelope.png">
+        <div class="text"></h3>Star Wars wedding rsvp envelope (light version, with characters)</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>6 / 10</h3></div>
+        <img src="cj-purple-beach-invite.png">
+        <div class="text"><h3>Beach wedding invitation</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>7/ 10</h3></div>
+        <img src="tell-your-story.jpg">
+        <div class="text"><h3>CreativeJ Coaching, LLC storytelling social media post</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>8 / 10</h3></div>
+        <img src="curvy-girl-excursions.png">
+        <div class="text"><h3>Curvy Girl Excursions custom logo</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>9 / 10</h3></div>
+        <img src="succes-is-social.jpg">
+        <div class="text"><h3>Success is social logo and social media post</h3></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><h3>10 / 10</h3></div>
+        <img src="social-debut.jpg">
+        <div class="text"><h3>Social Debut media banner</h3></div>
+      </div>
+  
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <! captions -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+</div>
+
+  <div class="hero-inner">
+    <h2>Software Engineering Projects</h2>
+    <p>Here are some of my projects from General Assembly and beyond, including a minigame to test your memory. Click on the images to see the live sites.</p>
+  </div>
+
     <div class="row-projects">
-        <button class="btn-quaternary">
+      <button class="btn-quaternary">
         <a href="minigame/index.html"><img src="rainbow-goat.jpeg" alt ="AI rainbow goat on white background" target="_blank">Minigame</img></a>
         
         <a href="http://www.weidiverse.com/"><img src="WAG.png" alt ="yellow background with WAG gamer group" target="_blank">Weidiverse</img></a>
         
-        <a href="https://dash.generalassemb.ly/JeniVW/build-your-own-business-website"><img src="alice-in-wonderland.jpeg" alt = "" target="_blank">Imagining Alice</img></a>
-        </button>
-        </div>
+        <a href="https://dash.generalassemb.ly/JeniVW/build-your-own-business-website"><img src="alice-in-wonderland.jpeg" alt = "dark-haired lady cosplaying Alice with Cheshire cat on her head" target="_blank">Imagining Alice</img></a>
+      </button>
+    </div>
         
-        <div class="row-projects">
-        <button class="btn-quaternary">
+    <div class="row-projects">
+      <button class="btn-quaternary">
         <a href="https://leaderfeeder.weebly.com/"><img src="leader-feeder-project.png" alt ="navy outline of White House with title Leader Feeder" target="_blank">Leader Feeder</a>
         
         <a href=https://dash.generalassemb.ly/JeniVW/build-your-own-blog-theme><img src="mad-hatter-hat.jpeg" alt ="tea table with mad hatter hat in center" target="_blank">Jeni's Mad Hatter Blog</img></a>
-        </button>
-        </div>
-        <a href="#Home">Back to top</a>
-  </body>
+       </button>
+    </div>
+
+  <div class="row">
+    <button class="btn-primary">
+    </button>
+  </div>
+  <a href="#Home">Back to top</a>
+
+  <div class="column">
+  </div>
+
+  <div class="footer"> 
+  <button class="btn-quaternary"><h2><strong>Social Links</strong></h2>    ♢         
+    <a href="https://github.com/creativejvw" target="_blank">GitHub</a>   ♢           
+    <a href="https://www.linkedin.com/in/creativej/" target="_blank">LinkedIn </a>    ♢         
+    <a href="https://www.facebook.com/creativejcoaching" target="_blank">CreativeJ Coaching, LLC </a>    ♢        
+    <a href="https://www.facebook.com/jenivw/" target="_blank">Jeni Venker Weidenbenner, Word Witch</a>   ♢
+  </button>
+
+  <h4>© CreativeJ Coaching, LLC 2023</h4> 
+  </div> 
 
 </body>
-
 </html>

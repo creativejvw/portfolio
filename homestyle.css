@@ -1,13 +1,7 @@
 
-* {
-  box-sizing: border-box;
-  border-radius: 25px;
-  padding: 0;
-  margin: 0;
-  overflow: scroll;
-} 
-
 .background {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #e3d6e0;
   color:#52063c;
   padding: 20px;
@@ -17,10 +11,8 @@
 
 html,
 body {
-  font-family: "Quicksand", "Poppins", sans-serif;
   background-color: #52063c;
   background-image: url("mystical-web-bkgrnd.jpg");
-  color: #e3d6e0;
   padding: 20px 60px;
   height: 100vh;
   place-items: center;
@@ -45,9 +37,11 @@ body {
 }
 
 .inner img {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .inner h1 {
@@ -55,7 +49,7 @@ body {
   justify-content: space-evenly;
   align-content: center;
   font-size: 30px;
-  font-weight: 10;
+  font-weight: 10em;
   line-height: 1.2;
   margin-bottom: 2rem;
   color: #b53389;
@@ -107,8 +101,8 @@ a:active {
 }
 
 .hero-pic .right {
-  max-width: 300px;
-  height: 200px;
+  max-width: 50px;
+  height: 50px;
   border-radius: 50%;
   align-items: right;
 }
@@ -146,12 +140,12 @@ a:active {
   color: #e3d6e0;
 }
 
-.btn-primary {
+button.btn-primary {
   display: inline-block;
-  align-items: right;
-  padding: 1rem;
+  margin: 1rem auto;
+  justify-content: left;
+  padding: 2rem;
   background-color: #b10368;
-  color: #e3d6e0;
   text-decoration: solid;
   border-radius: 25px;
   transition: all .2s ease;
@@ -166,7 +160,6 @@ a:active {
 
 .btn-secondary {
   display: inline-block;
-  align-items: right;
   padding: 1rem;
   background-color: #c90688;
   color: #e3d6e0;
@@ -201,13 +194,12 @@ a:active {
 
 .btn-quaternary {
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #b53389;
   color: #e3d6e0;
   text-decoration: solid;
   border-radius: 25px;
   transition: all .2s ease;
-  font-weight: 40px;
 }
 
 .btn-quaternary:hover {
@@ -240,7 +232,6 @@ a:active {
 p {
   color: #e3d6e0;
   font-size: 20px;
-  font-weight: 5px;
   line-height: 4vh;
   text-align: center;
 }
@@ -263,20 +254,20 @@ h4 {
   font-size: 18px;  
 }
 
-#flex-pic {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 50%;
+img .flex-pic {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
   align-items: top;
 }
 
-.flex-container-intro {
+.row-container-intro {
   display: flex;
   color:#52063c;
   height: 300px;
   align-content: stretch;
   flex-wrap: wrap;
-  overflow: scroll;
   justify-content: space-around;
   padding: 20px;
   margin: 20px;
@@ -285,12 +276,39 @@ h4 {
   opacity: 0.55;
 }
 
-.flex-container-intro h2 {
+.row-container-intro h2 {
   opacity: .95;
   color: #52063c;
 } 
 
-.flex-container-quals {
+div.column1-quals  {
+  display: inline-block;
+  padding: 2em;
+  margin: 1em 2em 3em 0;
+}
+
+div.column2-quals {
+  padding: 2em;
+  margin: 2em 2em 3em 0;
+  text-align: left;
+}
+
+img#row-quals {
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  padding: 2em;
+  margin: 2em 0 1em 2em;
+  text-align: right;
+}
+
+div.column3-quals {
+  padding: 2em;
+  margin: 2em 0 1em 2em;
+  text-align: right;
+}
+
+.row-container-quals {
   display: flex;
   background: #e3d6e0;
   color:#52063c;
@@ -298,7 +316,6 @@ h4 {
   height: 300px;
   align-content: center;
   flex-wrap: wrap;
-  overflow: scroll;
   justify-content: space-around;
   padding: 50px 20px 20px 80px;
   margin: 50px 20px 20px 80px;
@@ -307,12 +324,11 @@ h4 {
   opacity: 0.55;
 }
 
-.flex-container {
+.row-container {
   display: flex;
   height: 400px;
   align-content: stretch;
   flex-wrap: wrap;
-  overflow: scroll;
   justify-content: space-around;
   padding: 20px;
   margin: 20px;
@@ -321,9 +337,9 @@ h4 {
 }
 
 .column-pic {
-    max-width: 300px;
-    height: 200px;
-    border-radius: 50%;
+    max-width: 100px;
+    height: 100px;
+    border-radius: 25%;
     align-items: top;
 }
 
@@ -349,10 +365,8 @@ h4 {
   background-color:#824875;
   display: flex;
   align-items: stretch;
-  overflow: scroll;
   padding: 20px;
   border-radius: 25px;
-  
 }
 
 .column-bio {
@@ -366,8 +380,8 @@ h4 {
 .row-projects {
   display: -webkit-flex;
   background-color: #824875;
-  align-items: stretch;
-  align-self: stretch;
+  align-items: center;
+  align-self: center;
   justify-content: center;
   margin: 20px 20px 20px 20px;
   padding: 20px 20px 20px 20px;
@@ -377,8 +391,8 @@ h4 {
 .column-brand, .column-marketing, .column-tech, .column-testimonials {
   display: flex;
   background-color:#824875;
-  align-items: stretch;
-  align-self: stretch;
+  align-items: center;
+  align-self: center;
   justify-content: center;
   margin: 20px 20px 20px 20px;
   padding: 20px 20px 20px 20px;
@@ -407,9 +421,6 @@ h4 {
   }
   h1 {
   font-size: 30px;
-  }
-  button {
-  padding: 15px 90px;
   }
   footer {
   text-align: center;
