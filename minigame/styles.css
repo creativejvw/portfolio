@@ -1,33 +1,71 @@
  *, *::before, *::after {
-      margin: 0;
-      padding: 0;
+      margin: 10px;
       box-sizing: border-box;
-      background: url("https://i.imgur.com/yJnKUUZ.jpg") no-repeat;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
 html, body {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
     margin: 20px 0;
     margin: 20px 0;
-    background: url("https://i.imgur.com/yJnKUUZ.jpg") no-repeat  #f9dfde;
+    background: url("goatbkgrnd.jpg") no-repeat  #f9dfde;
     }
 
-h1, h2, h3 {
+header {
+  background-color: #e3d6e0;
+  padding: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+
+h1, h2 {
+    padding: 20px;
     color: #dd037b;
     text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+    font-weight: bold;  
+}
 
-.grid {
-  max-width: 950px;
-  margin: 0 auto;
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  width: 440px;
+  height: 330px;
+  margin: 5px auto;  
+  background: #fc7fce;
+  cursor: pointer;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  }
+
+ img {
+  padding: 5px;
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
  }
 
+ .start {
+  background-color: #ff7c73;
+  border: double;
+  border-radius: 0.3em;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start:hover {
+  background: transparent;
+  border-color: #ff7c73;
+  color: #fc7fce;
+}
+ 
 .card {
   position: relative;
   transition: all .4s linear;
@@ -65,21 +103,31 @@ h1, h2, h3 {
   background: #dd037b no-repeat center center / contain;
   }
 
-#start-button{
-      border: none;
-      border-radius: 0.3em;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5em 1em;
-      cursor: pointer;
-      background: #ff7c73;
-      transition: all 0.3s ease;
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 
-#start-button:hover {
-      background: #fff;
-      color: #ff7c73;
-      background: transparent;
-      border-color: #ff7c73;
-      color: #fc7fce;
-  }
+.score, .timer, .move-counter {
+  display: flex;
+  justify-content: center;
+  color: #dd037b;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.restart {
+  background-color: #ff7c73;
+  border: dotted;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart:hover {
+  background: transparent;
+  border-color: #0c0100;
+  color: #ff7c73;
+}

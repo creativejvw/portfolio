@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><h1>Billy Mates Memory Match</h1></title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <script src="script.js" defer> </script>
+    <script="goatscript.js" defer> </script>
   </head>
   
 <body>
-    <h1> Billy Mates Memory Match Game </h1>
-    <h2>Try to match all 6 pairs of goats as fast as possible. Let's GOat started!</h2>
-    <button id="start-button">Start Game</button>
+    <div>
+      <h1> Billy Mates Memory Match Game </h1>
+      <h2>Try to match all 6 pairs of goats as fast as possible. Let's GOat started!<br>
+      <button id="start">Start Game</button>
+      </h2>
+    </div>
     
+    <h3>Instructions: Click on a card to flip it over. Try to find the matching card. If you find a match, the cards will stay flipped over. If you do not find a match, the cards will flip back over. Try to find all the matches as fast as possible. Good luck!</h3><br><br>
+    </div>
+    
+    <div class="cards-container"> </div>
+
+      <div class="results">
+        <h3>Score: <span id="score">0</span> &nbsp;&nbsp;&nbsp; Time: <span id="timer">0</span>
+        </h3>  
+        <h3>Moves: <span id="move-counter">0</span>
+        </h3>  
+        <h2>
+        <button id="restart" onclick="startGame">Retart Game</button>
+        </h2>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
