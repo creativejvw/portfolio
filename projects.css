@@ -10,20 +10,20 @@
   }
 
   img {
-    width: 300px;
-    height: 200px;
-    border-radius: 0;
+    width: 150px;
+    height: 150px;
     justify-content: center;
     vertical-align: top;
     align-items: center;
     display: flex;
+  }
  
   /* Style the header */
   .inner {
     color: #e3d6e0;
     display: flex;
     max-width: 100%;
-    border-radius: 25px;
+    border-radius: 10px;
     align-items: center;
     justify-content: space-evenly;
     font-size: 20px;
@@ -33,7 +33,7 @@
   .inner img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
   } 
@@ -48,7 +48,6 @@
     margin-bottom: 2rem;
     color: #b53389;
   }
-    
 
   #contact {
     display: inline-block;
@@ -60,8 +59,6 @@
     border-radius: 5px;
     transition: all .2s ease;
   }
-
-  .
 
   html,
   body {
@@ -78,7 +75,7 @@
   #favicon {
     max-width: 30px;
     max-height: 30px;
-    border-radius: 50%;
+    border-radius: 10px;
   }
  
   p {
@@ -93,6 +90,7 @@
     font-weight: bold;
     font-size: 25px;
   }
+
   h3 {
     color: #e3d6e0;
     font-weight: bold;
@@ -106,14 +104,14 @@
   
   .hero {
     padding: 30px 30px 30px 30px;
-    margin: 20px auto;
+    margin: 20px 20px 20px 20px;
     font-family: "Josefin Sans", "Montserrat", "Playfair Display", sans-serif;
   }
   
   .hero-pic .right {
     max-width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 10px;
     align-items: right;
   }
   
@@ -156,13 +154,19 @@
     color: #52063c;
   }
 
+  .row-projects {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
+  }
+
   .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
+    position: relative;
+    width: 75px;
+    height: 75px;
     background-color: #b10368;
-    border-radius: 25px;
-    border: none;
+    border-radius: 10px;
     z-index: 1em;
     cursor: pointer;
     text-align: center;
@@ -182,7 +186,7 @@
     padding: 2rem;
     background-color: #b10368;
     text-decoration: solid;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: all .2s ease;
   }
 
@@ -199,7 +203,7 @@
     background-color: #c90688;
     color: #e3d6e0;
     text-decoration: solid;
-    border-radius: 25px;
+    border-radius: 10px;
     transition: all .2s ease;
   }
 
@@ -216,14 +220,14 @@
     background-color: #403e81;
     color: #e3d6e0;
     text-decoration: solid;
-    border-radius: 25px;
+    border-radius: 10px;
     transition: all .2s ease;
   }
 
   .btn-tertiary:hover {
     background: transparent;
     border-color: #b10368;
-    border-width: 30px;
+    border-width: 15px;
     color: #e3d6e0;
   }
 
@@ -233,7 +237,7 @@
     background-color: #b53389;
     color: #e3d6e0;
     text-decoration: solid;
-    border-radius: 25px;
+    border-radius: 10px;
     transition: all .2s ease;
   }
 
@@ -270,13 +274,11 @@
       
   .carousel-container {
     width: 1000px;
+    height: 200px;
     position: relative;
-    margin: 15px auto;
+    margin: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
     color: #e3d6e0;
-    justify-content: center;
-    align-items: center;
-    display: flex
-    flex-wrap: wrap;
   }
 
   .text {
@@ -297,16 +299,6 @@
     padding: 5em 5em;
     position: absolute;
     top: 0;
-  }
-
-  .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #e3d6e0;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
   }
 
   .active {
