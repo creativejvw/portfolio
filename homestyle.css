@@ -321,12 +321,11 @@ div.column2-quals {
 }
 
 img#row-quals {
-  width: 100px;
-  height: 100px;
+  display: inline-block
+  width: 200px;
+  height: 200px;
   border-radius: 25%;
-  padding: 2em;
-  margin: 2em 0 1em 2em;
-  text-align: right;
+  justify-content: center;
 }
 
 div.column3-quals {
