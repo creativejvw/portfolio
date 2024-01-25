@@ -154,15 +154,6 @@ a:active {
   color: #e3d6e0;
 }
 
-.carousel-container {
-  width: 1000px;
-  height: 200px;
-  position: relative;
-  margin: 15px 15px 15px 15px;
-  padding: 15px 15px 15px 15px;
-  color: #e3d6e0;
-}
-
 button.btn-primary {
   display: inline-block;
   margin: 1rem auto;
@@ -330,7 +321,7 @@ div.column2-quals {
 }
 
 img#row-quals {
-  display: inline-block
+  display: inline-block;
   width: 200px;
   height: 200px;
   border-radius: 25%;
@@ -388,20 +379,8 @@ div.column3-quals {
   flex-wrap: wrap;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  color: #e3d6e0;
-  font-family: monospace;
-  font-size: 25px;
-  text-align: left;
-  background-color: #52063c;
-  border-radius: 25px;
-  opacity: 0.75;
 
-}
-
-/* Create equal columns that sits next to each other */
+/* Create equal columns that sit next to each other */
 .column {
   display: flex;
   padding: 20px;
@@ -412,7 +391,7 @@ table {
   justify-content: center;
   background-color:#824875;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   padding: 20px;
   border-radius: 25px;
 }
